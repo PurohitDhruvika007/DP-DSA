@@ -12,6 +12,7 @@ class Queue {
 
         this.rear += 1;
         if (this.rear == this.length) {
+            console.log('queue is overflow')
             return;
         }
         this.queue[this.rear] = value;
@@ -19,7 +20,8 @@ class Queue {
     }
 
     delete() {
-        if (this.front == -1 || this.front == length) {
+        if (this.front == -1 || this.front == this.length) {
+            console.log("queue is underflow");
             return;
         }
         console.log(`data deleted ${this.queue[this.front]}`);
@@ -27,7 +29,11 @@ class Queue {
     }
 
     print() {
-        console.log(this.queue)
+        let temp = this.front;
+        while (temp < this.rear) {
+            console.log(this.queue[temp]);
+            temp++;
+        }
     }
 
     isEmpty() {
@@ -49,4 +55,14 @@ class Queue {
 }
 
 const queue = new Queue(5);
+queue.isEmpty();
 queue.insert(1);
+queue.insert(2);
+queue.insert(3);
+queue.insert(4);
+queue.insert(5);
+queue.insert(6);
+queue.delete();
+queue.peek(2, 10);
+queue.isEmpty();
+queue.print();
