@@ -344,3 +344,41 @@
 // }
 // console.log(`the second smallest element is ${array[1]}`);
 
+// 37.
+// let array = [1, 2, 3, 4, 56, 6, 78];
+// for (i = 0; i < array.length; i++) {
+//     if (array[i] % 2 == 0) {
+//         console.log(array[i]);
+//     }
+// }
+
+
+// 38.
+// let array = [1, 2, 3, 45, 6, 7, 8];
+// for (i = 0; i < array.length; i++) {
+//     if (array[i] % 2 != 0) {
+//         console.log(array[i]);
+//     }
+// }
+
+// 39.
+// let array = [1, 2, 3, 4, 5, 6, 7, 8];
+// for (let i = 0; i < array.length; i++) {
+//     console.log(array[i] * array[i]);
+// }
+
+// 40.
+// let array = [1, 2, 3, 4, 5, 6, 7, 8];
+// for (i = 0; i < array.length; i++) {
+//     console.log(array[i] * 2);
+// }
+
+// let array = [1, 2, 3, 4, 5, 6, 7, 8];
+// let ans = array.reduce((pre, cur) => {
+//     pre += cur;
+//     return pre;
+// })
+// console.log(ans);
+
+// 42.
+

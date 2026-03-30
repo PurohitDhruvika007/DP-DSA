@@ -32,6 +32,14 @@ class Stack {
     display() {
         this.#stack.map((element) => console.log(element));
     }
+    isEmpty() {
+        if (this.#top == -1) {
+            console.log("stack is empty");
+        }
+        else {
+            console.log("stack is not empty");
+        }
+    }
 }
 
 const s = new Stack(5);
@@ -42,3 +50,6 @@ s.insert(4);
 s.insert(5);
 s.delete(1);
 s.display();
+s.update(3, 10);
+s.display();
+s.isEmpty();
