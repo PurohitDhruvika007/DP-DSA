@@ -15,11 +15,8 @@ class Queue {
             this.front = this.rear = newNode;
             return;
         }
-        let current = this.front
-        while (current.next) {
-            current = current.next;
-        }
-        current.next = newNode;
+
+        this.rear.next = newNode;
         this.rear = newNode;
     }
     print() {
