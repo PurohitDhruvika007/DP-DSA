@@ -7,7 +7,6 @@ for (let i = 0; i < array.length; i++) {
             [array[min], array[j]] = [array[j], array[min]];
         }
     }
-
 }
 
 console.log(array);
