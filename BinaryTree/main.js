@@ -77,6 +77,26 @@ class BinaryTree {
             console.log(node.data);
         }
     }
+    print(node) {
+        if (node == null) {
+            console.log("binary tree is empty");
+            return;
+        }
+        let queue = [];
+        queue.push(node);
+
+        while (queue.length > 0) {
+            let current = queue.shift();
+            console.log(current.data);
+
+            if (current.left != null) {
+                queue.push(current.left);
+            }
+            if (current.right != null) {
+                queue.push(current.right);
+            }
+        }
+    }
 }
 
 const bt = new BinaryTree();
@@ -95,7 +115,7 @@ bt.insert(12);
 let res = bt.search(45);
 console.log(res);
 
-
+bt.print(bt.root);
 // bt.inorder(bt.root);
 // bt.preorder(bt.root);
 // bt.postorder(bt.root);
