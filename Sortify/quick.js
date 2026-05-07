@@ -1,10 +1,11 @@
-let array = [1, 4, 5, 6, 2, 3, 9, 3, 10, 15, 8];
 
-const quick = (array) => {
+let array = [4, 3, 7, 5, 1, 9, 5, 2];
+
+let quick = (array) => {
     if (array.length <= 1) return array;
-    let pivot = array[array.length - 1];
-    let right = [];
     let left = [];
+    let right = [];
+    let pivot = array[array.length - 1];
     for (let i = 0; i < array.length - 1; i++) {
         if (array[i] < pivot) {
             left.push(array[i]);
